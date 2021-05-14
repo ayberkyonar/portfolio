@@ -1,0 +1,85 @@
+*{
+    font-family:'Arial';
+    color: rgb(0, 0, 0);
+  }
+
+body{
+    background-image: url("https://wallpapershome.com/images/pages/pic_h/15829.jpg");
+}
+
+#tekst{
+  color: black;
+  font-weight:bold;
+}
+
+.cards{
+  padding: 15px;
+}
+
+.display-4{
+  text-align: center;
+  color: white;
+}
+
+.nav-item{
+  height: 0px;
+}
+
+.vaardigheden{
+  padding: 15px;
+}
+
+.card-title{
+  color: white;
+}
+
+.card-text{
+  color: white;
+}
+
+.bptekst{
+  padding: 15px;
+}
+
+footer{
+  position: fixed;
+  opacity:0.8;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  height: auto;
+  width: 100%;
+  font-family: "open sans";
+  padding-top: 0px;
+  color: #fff;
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3{
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform:capitalize;
+  line-height: 3rem;
+}
+.footer-content p{
+  color: #fff;
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size:  14px;
+}
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin: 1rem;
+  font-size: 25px;
+}

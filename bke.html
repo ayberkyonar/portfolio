@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tic Tac Toe</title>
+  <meta charset="utf-8">
+  <link rel="STYLESHEET" href="css/bke.css" type="text/css">
+</head>
+<body>
+    <div class="page-title">
+        <h2 id="playerTurnElement">
+            ✌️ It takes two to Tic Tac Toe! ✌️
+        </h2>
+    </div>
+    <div class="players-container">
+            <div class="game-container">
+                <div class="row">
+                    <div class="column add-players">
+                        <div class="row">
+                            Create a new player:
+                            <br>
+                            <input name="player-name" type="text" class="input-field input-field-player-name" placeholder="name">
+                        </div>
+                        <button type="button" class="button add-player-button">Add player</button>
+                        <div class="row">
+                            <p>
+                            <button type="button" class="button reset-game-button">Reset Game</button>
+                            </p>
+                        </div>
+                    </div>
+                <row>
+                    <div class="column">
+                        <div class="player-info-container">
+                            <div class="player-one-label">
+                                Player One
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="player-info-container">
+                            <div class="player-two-label">
+                                Player Two
+                            </div>
+                        </div>
+                    </div>
+                    <row>
+                        <div class="tic-tac-toe-board">
+                            <div id="0" class="box"></div>
+                            <div id="1" class="box"></div>
+                            <div id="2" class="box"></div>
+                            <div id="3" class="box"></div>
+                            <div id="4" class="box"></div>
+                            <div id="5" class="box"></div>
+                            <div id="6" class="box"></div>
+                            <div id="7" class="box"></div>
+                            <div id="8" class="box"></div>
+                          </div>
+                    </row>
+                </row>          
+            </div>
+        </div>
+    </div>
+    <script src="js/bke.js"></script>
+    <script src="js/Player.js"></script>
+</body>
+</html>

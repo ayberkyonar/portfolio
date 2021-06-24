@@ -82,6 +82,36 @@ function printPlayers() {
     }
 }
 
+function resetGame() {
+    //reset the game
+
+    let vak=document.querySelectorAll('.box')
+
+    console.log("Resetting the game");
+    players.length = 0;
+    playerOneLabel.innerHTML = "Player One";
+    playerTwoLabel.innerHTML = "Player Two";
+    playerTurn.innerHTML = "✌️ It takes two to Tic Tac Toe! ✌️";
+
+    for (let i = 0; i < model.length; i++) {
+        model[i]="Leeg";
+        vak[i].innerHTML= "";
+    }
+}
+
+function resetBoard() {
+    //reset the board
+
+    let vak=document.querySelectorAll('.box')
+
+    console.log("Resetting the board");
+
+    for (let i = 0; i < model.length; i++) {
+        model[i]="Leeg";
+        vak[i].innerHTML= "";
+    }
+}
+
 let model= new Array(9);
 for (let i = 0; i < model.length; i++) {
     model[i]="Leeg";
@@ -116,10 +146,10 @@ function handleClickSpeelveld(event){
             playerTurn.innerHTML = "It's the turn of: " + players[0].name;
         }
     }
-    wincon();
+    Win();
 }
 
-function wincon() {
+function Win() {
         
     if (model[0]=== "X" && model[1]=== "X" && model[2]=== "X") {
         players[0].points++;
@@ -201,34 +231,5 @@ function wincon() {
         players[1].points++;
         playerTwoLabel.innerHTML = "Name: " + players[1].name  + "<br> Points: " + players[1].points + "<br> Symbol: " + players[1].symbol;
         resetBoard();
-    }
-}
-
-function resetGame() {
-    //reset the game
-
-    let vak=document.querySelectorAll('.box')
-
-    console.log("Resetting the game");
-    players.length = 0;
-    playerOneLabel.innerHTML = "Player One";
-    playerTwoLabel.innerHTML = "Player Two";
-
-    for (let i = 0; i < model.length; i++) {
-        model[i]="Leeg";
-        vak[i].innerHTML= "";
-    }
-}
-
-function resetBoard() {
-    //reset the board
-
-    let vak=document.querySelectorAll('.box')
-
-    console.log("Resetting the board");
-
-    for (let i = 0; i < model.length; i++) {
-        model[i]="Leeg";
-        vak[i].innerHTML= "";
     }
 }

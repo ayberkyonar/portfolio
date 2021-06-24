@@ -57,7 +57,7 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    startButton.innerText = 'Restart'
+    startButton.innerText = 'Opnieuw Spelen'
     startButton.classList.remove('hide')
   }
 }
@@ -78,35 +78,30 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: '?',
+    question: 'Welke datatype word gebruikt voor tekst?',
     answers: [
-      { text: '', correct: true },
-      { text: '', correct: false }
+      { text: 'int', correct: false },
+      { text: 'bool', correct: false },
+      { text: 'string', correct: true },
+      { text: 'double', correct: false }
     ]
   },
   {
-    question: '?',
+    question: 'Hoe begin je een array?',
     answers: [
-      { text: '', correct: true },
-      { text: '', correct: true },
-      { text: '', correct: true },
-      { text: '', correct: true }
+      { text: 'Array = new Array[ ]', correct: false },
+      { text: 'string[ ] i = { "", "" };', correct: true },
+      { text: 'Array[ ] = ', correct: false },
+      { text: 'Console.Array();', correct: false }
     ]
   },
   {
-    question: '?',
+    question: 'Hoe convert je string naar int?',
     answers: [
-      { text: '', correct: false },
-      { text: '', correct: true },
-      { text: '', correct: false },
-      { text: '', correct: false }
+      { text: 'string = ConvertInt();', correct: false },
+      { text: 'Console.WriteLine(string = Convert);', correct: false },
+      { text: 'string = int;', correct: false },
+      { text: 'Convert.ToInt32();', correct: true }
     ]
   },
-  {
-    question: '?',
-    answers: [
-      { text: '', correct: false },
-      { text: '', correct: true }
-    ]
-  }
 ]

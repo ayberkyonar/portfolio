@@ -9,7 +9,7 @@ function Login() {
     }
     else if(username=="docent" && password=="rocmondriaan")
     {
-        window.location.href="homepage.html";
+        window.location.href="docentpage.html";
         return false;
     }
     else{

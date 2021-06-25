@@ -1,6 +1,6 @@
 let headerButton = document.querySelector('body');
 let myButtons = document.querySelector('.changeTheme');
-
+//theme switcher
 function changeColor(){
     headerButton.classList.toggle ('themeDark');
 }
@@ -16,7 +16,7 @@ let buttonsElement=document.querySelector('.buttons');
 
 buttonsElement.addEventListener('click', handleClick);
 showDisplay();
-
+//handle the click as an number or operators
 function handleClick(event)
 {
     const element=event.target;
@@ -54,14 +54,14 @@ function handleNumber(el)
 
     showDisplay();
 } 
-
+//operator function
 function handleOperator(el) {
     operator=el.innerHTML;
     firstValue = display;
     display = "0";
     showDisplay();
 }
-
+//handle dot 
 function handleDot(el){
     let dot = el.innerHTML;
     if(!display.includes(".")){
@@ -69,7 +69,7 @@ function handleDot(el){
     }
     showDisplay();
 }
-
+//button to clear the calculator
 function handleClear (el) {
     display='0';
     operator=null;
@@ -79,7 +79,7 @@ function handleClear (el) {
     displayElement.innerHTML = 0;
     showDisplay;
 }
-
+//the total of everything you did in the calculator
 function handleEqual () {
     secondValue=display;
     display = "0";
@@ -97,7 +97,7 @@ function handleEqual () {
     display=result;
     showDisplay();
 }
-
+//function to show the display
 function showDisplay(){
     displayElement.innerHTML=display;
 }

@@ -1,4 +1,4 @@
-function Login() {
+function Login() {   //login function if you login as a student you go to another tab then as a teacher
     let site = document.querySelector(".site")
     var username=document.getElementById("username").value;
     var password=document.getElementById("password").value;

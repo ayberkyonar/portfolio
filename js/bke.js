@@ -111,7 +111,7 @@ function resetBoard() {
         vak[i].innerHTML= "";
     }
 }
-
+//Array for the board
 let model= new Array(9);
 for (let i = 0; i < model.length; i++) {
     model[i]="Leeg";
@@ -121,7 +121,7 @@ let vakjes=document.querySelector('.tic-tac-toe-board')
 let playerTurn = document.querySelector('#playerTurnElement')
 
 vakjes.addEventListener('click', handleClickSpeelveld);
-
+//turn of X and O
 function handleClickSpeelveld(event){
     if (players[1].turn === false) 
     {
@@ -148,7 +148,7 @@ function handleClickSpeelveld(event){
     }
     Win();
 }
-
+//win function for x or o
 function Win() {
         
     if (model[0]=== "X" && model[1]=== "X" && model[2]=== "X") {

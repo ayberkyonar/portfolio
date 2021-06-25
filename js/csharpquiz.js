@@ -5,13 +5,13 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex
-
+//button to start the quiz
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
-
+//if you start the game the previous questions will vanish/hide
 function startGame() {
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -24,7 +24,7 @@ function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
-
+//show the question
 function showQuestion(question) {
   questionElement.innerText = question.question
   question.answers.forEach(answer => {
@@ -38,7 +38,7 @@ function showQuestion(question) {
     answerButtonsElement.appendChild(button)
   })
 }
-
+//hide function
 function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
@@ -46,7 +46,7 @@ function resetState() {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
 }
-
+//select the answer of the question
 function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
@@ -61,7 +61,7 @@ function selectAnswer(e) {
     startButton.classList.remove('hide')
   }
 }
-
+//the status of the answer 
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
@@ -75,7 +75,7 @@ function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
 }
-
+//objects for the questions with true or false
 const questions = [
   {
     question: 'Welke datatype word gebruikt voor tekst?',

@@ -7,13 +7,13 @@ body{
     background-image: url("https://wallpapershome.com/images/pages/pic_h/15829.jpg");
 }
 
+.btngit{
+  float: right;
+}
+
 #tekst{
   color: black;
   font-weight:bold;
-}
-
-.github{
-  color: white;
 }
 
 .jumbotron{

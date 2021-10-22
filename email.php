@@ -9,13 +9,13 @@
             $message = $_POST['message'];
 
             $to = "yonarayberk@gmail.com";
-            $body = "";
+            $body = " ";
 
             $body .= "From: ".$userName. "\r\n";
             $body .= "Email: ".$userEmail. "\r\n";
             $body .= "Message: ".$message. "\r\n";
 
-            //mail($to,$messageSubject,$body); WERKT NOG NIET!!!
+             mail($to,$messageSubject,$body);
 
         }
     }
@@ -30,21 +30,12 @@
     <link rel="stylesheet" href= "css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/email.css" media="all">
     <script src="js/email.js"></script>
 
 </head>
 
 <body>
-<?php
-if ($message_sent):
-?>
-    <h3>Dankjewel.</h3>
-
-<?php
-else:
-?>
 
     <div class="col-md-12">
         <nav class="navbar navbar-expand-md bg-dark">
@@ -76,7 +67,6 @@ else:
         </div>
     </div>
 
-
 <div class="container">
     <form action="email.php" method="POST" class="form">
         <div class="form-group">
@@ -100,9 +90,6 @@ else:
         </div>
     </form>
 </div>
-<?php
-endif;
-?>
 
 </body>
 

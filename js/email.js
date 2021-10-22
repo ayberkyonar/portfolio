@@ -1,4 +1,4 @@
-$(function() {
+(function() {
 
     $(".form-control").on('focus', function(){
 

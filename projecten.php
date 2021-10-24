@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang= "en">
     <head>
-    
-      <meta charset="utf-8"> 
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS --> 
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
       <link rel="stylesheet" href= "css/style.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> 
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        
-    <title>Over Ayberk</title>
+
+    <title>Projecten</title>
 
     <head>
 
@@ -41,49 +41,57 @@
           </div>
         </nav>
         <div class="jumbotron d-none d-sm-block bg-dark">
-          <h1 class="display-10">Over Ayberk</h1>
+          <h1 class="display-10">Projecten</h1>
         </div>
       </div>
-      
-            <div class="container">
-                <div class="row">
-                  <div class="col-sm">
-                    <div class="img-fluid">
-                        <img src="img/laptop.jpg" style="float: left;" alt= "foto van een laptop" width="500" height="auto">
-                    </div>
-                  </div>
-                  <div class="col-sm">
-                    <h5>Mijn naam is Ayberk Yonar, ik ben 16 jaar oud.</h5> 
-                    <h5>Ik studeer momenteel op het ROC Mondriaan als Software Developer.</h5>
-                    <h5>Mijn motivatie voor deze opleiding was altijd groot omdat ik altijd als iets wilde doen met computers.</h5>
-                    <h5>Ik vind het op dit moment een passende opleiding voor mij.</h5>
-                    <h5>Na deze opleiding zou ik graag naar het HBO willen en verder studeren om uiteindelijk te werken als Software Developer of misschien iets anders.</h5>
-                  </div>
-                </div>
-            </div>
 
-            <br>
-            
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <a href="beroepsprofiel.html" id="bfbutton" class="btn btn-dark float-right" role="button" >Beroepsprofiel</a>
-                </div>
+      <?php
 
-                <footer>
-                  <div class="footer-content">
-                    <p>
-                      Telefoon: 0123456789<br>
-                      Email: 302155034@student.rocmondriaan.nl 
-                    <ul class="socials" id="insta" style="justify-content: center;">
-                      <li><a href="https://www.instagram.com/ayberk.yr/"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
+      try {
+          $db = new PDO ("mysql:host=localhost;dbname=portfolio", "root", "");
+          $query = $db->prepare("SELECT * FROM projecten ");
+          $query->execute();
+          $result = $query->fetchAll(PDO::FETCH_ASSOC);
+          foreach ($result as $data):?>
+      <div class="container">
+        <div class="row cards">
+          <div class="col-md-4">
+              <div class="card h-100 bg-dark">
+                  <img class="card-img-top img-fluid" src="<?php echo $data["picture"]?>" alt="foto van een gokspel">
+                  <div class="card-body">
+                      <h5 class="card-title"><?php echo $data["name"]?></h5>
+                      <p class="card-text"><?php echo $data["description"]?></p>
+                      <br>
+                      <a href= "<?php echo $data["project_link"]?>" class="btn btn-primary">Project</a>
+                      <a href="<?php echo $data["github_link"]?>"class="btn btn-primary btngit">GitHub</a>
                   </div>
-                </footer>
-                
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <?php endforeach;
+      } catch (PDOException $e) {
+          die("ERROR!:" . $e->getMessage());
+      }
+      ?>
+
+          <br><br><br>
+
+              <footer>
+                <div class="footer-content">
+                  <p>
+                Telefoon: 0123456789<br>
+                    Email: 302155034@student.rocmondriaan.nl
+<ul class="socials" id="insta" style="justify-content: center;">
+                    <li><a href="https://www.instagram.com/ayberk.yr/"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </footer>
+
+              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> <!-- Option 2: jQuery, Popper.js, and Bootstrap JS <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> -->
-    
+
     </body>
 
- </html> ​
+ </html>

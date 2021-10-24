@@ -45,36 +45,45 @@
         </div>
       </div>
 
+      <div class="container">
       <?php
-
       try {
           $db = new PDO ("mysql:host=localhost;dbname=portfolio", "root", "");
           $query = $db->prepare("SELECT * FROM projecten ");
           $query->execute();
           $result = $query->fetchAll(PDO::FETCH_ASSOC);
-          foreach ($result as $data):?>
-      <div class="container">
-        <div class="row cards">
+          $i = 0;
+          foreach ($result as $data):
+              if ($i === 0 || $i === 3) {
+                  echo '<div class="row cards">';
+              }
+              ?>
+
           <div class="col-md-4">
               <div class="card h-100 bg-dark">
                   <img class="card-img-top img-fluid" src="<?php echo $data["picture"]?>" alt="foto van een gokspel">
                   <div class="card-body">
                       <h5 class="card-title"><?php echo $data["name"]?></h5>
                       <p class="card-text"><?php echo $data["description"]?></p>
-                      <br>
                       <a href= "<?php echo $data["project_link"]?>" class="btn btn-primary">Project</a>
                       <a href="<?php echo $data["github_link"]?>"class="btn btn-primary btngit">GitHub</a>
                   </div>
               </div>
           </div>
-        </div>
-      </div>
 
-      <?php endforeach;
+      <?php
+              if ($i == 2 || $i == 5) {
+                  echo '</div>';
+
+              }
+              $i++;
+
+          endforeach;
       } catch (PDOException $e) {
           die("ERROR!:" . $e->getMessage());
       }
       ?>
+      </div>
 
           <br><br><br>
 

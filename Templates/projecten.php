@@ -4,7 +4,7 @@
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href= "css/style.css">
+      <link rel="stylesheet" href= "../public/css/style.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Hoofdpagina</a>
+                <a class="nav-link active" href="../public/index.html">Hoofdpagina</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="over.html">Over Ayberk</a>

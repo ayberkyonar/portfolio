@@ -1,0 +1,26 @@
+BODY {
+    min-height: 100%;
+    background-image: url(../img/bgzuzu.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    width: 100px;
+}
+
+HTML {
+    height: 100%;
+}
+
+.form-text{
+    color: white;
+}

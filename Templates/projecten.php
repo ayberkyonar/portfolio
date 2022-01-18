@@ -61,7 +61,7 @@
 
           <div class="col-md-4">
               <div class="card h-100 bg-dark">
-                  <img class="card-img-top img-fluid" src="<?php echo $data["picture"]?>" alt="foto van een gokspel">
+                  <img class="card-img-top img-fluid" src="<?php echo $data["picture"]?>" alt="foto van zuzu">
                   <div class="card-body">
                       <h5 class="card-title"><?php echo $data["name"]?></h5>
                       <p class="card-text"><?php echo $data["description"]?></p>
